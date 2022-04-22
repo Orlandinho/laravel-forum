@@ -2,6 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Reply;
+use App\Models\Thread;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,6 +17,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        User::factory(10)->create();
+
+        Thread::factory(50)->create();
+
+        Reply::factory(500)->create();
     }
 }
