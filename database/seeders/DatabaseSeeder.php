@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Channel;
 use App\Models\Reply;
 use App\Models\Thread;
 use App\Models\User;
@@ -18,6 +19,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         User::factory(10)->create();
+
+        Channel::factory(5)->create();
 
         Thread::factory(50)->create();
 
